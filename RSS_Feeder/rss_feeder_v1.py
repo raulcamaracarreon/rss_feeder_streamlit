@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 
 # Añadir las URL de feeds por defecto
 default_feeds = [
-    'https://mexiconewsdaily.com/feed/',
     'http://imparcialoaxaca.mx/feed/',
     'https://www.elsiglodetorreon.com.mx/index.xml',
     'https://www.mural.com.mx/rss/portada.xml',
@@ -12,6 +11,7 @@ default_feeds = [
     'https://www.sinembargo.mx/feed',
     'https://www.elnorte.com/rss/portada.xml',
     'http://expresochiapas.com/noticias/feed/'
+    'https://mexiconewsdaily.com/feed/',
 ]
 
 def get_feed(url):
@@ -33,7 +33,7 @@ st.title('RSS Feed Reader')
 url = st.text_input('Ingresa la URL del feed RSS', value=",".join(default_feeds))
 keyword = st.text_input('Filtra por palabra clave (opcional)')
 
-max_articles = st.slider('Número máximo de artículos a mostrar', min_value=1, max_value=500, value=10)
+max_articles = st.slider('Número máximo de artículos a mostrar', min_value=1, max_value=100, value=10)
 
 urls = url.split(",")
 
