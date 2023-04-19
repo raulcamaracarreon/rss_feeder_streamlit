@@ -30,10 +30,10 @@ def filter_articles(articles, keyword):
 
 st.title('RSS Feed Reader')
 
-url = st.text_input('Ingresa la URL del feed RSS', value=",".join(default_feeds))
-keyword = st.text_input('Filtra por palabra clave (opcional)')
+url = st.text_input('Enter the RSS feed URL’', value=",".join(default_feeds))
+keyword = st.text_input('Filter by keyword (optional)')
 
-max_articles = st.slider('Número máximo de artículos a mostrar', min_value=1, max_value=100, value=10)
+max_articles = st.slider('Maximum number of articles to show', min_value=1, max_value=100, value=10)
 
 urls = url.split(",")
 
@@ -57,8 +57,8 @@ for single_url in urls:
             
             # Mostrar la fecha de publicación o actualización
             if hasattr(article, 'published'):
-                st.write('**Publicado:**', article.published)
+                st.write('**Published:**', article.published)
             elif hasattr(article, 'updated'):
-                st.write('**Actualizado:**', article.updated)
+                st.write('**Updated:**', article.updated)
 
 
