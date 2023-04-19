@@ -33,7 +33,7 @@ st.title('RSS Feed Reader')
 url = st.text_input('Enter the RSS feed URL (You can add more than one URL by separating them with commas)', value=",".join(default_feeds))
 keyword = st.text_input('Filter by keyword (optional)')
 
-max_articles = st.slider('Maximum number of articles to show', min_value=1, max_value=100, value=10)
+max_articles = st.slider('Maximum number of articles to show', min_value=1, max_value=100, value=25)
 
 urls = url.split(",")
 
