@@ -10,7 +10,7 @@ default_feeds = [
     'https://diario.mx/jrz/media/sitemaps/rss.xml',
     'https://www.sinembargo.mx/feed',
     'https://www.elnorte.com/rss/portada.xml',
-    'http://expresochiapas.com/noticias/feed/'
+    'http://expresochiapas.com/noticias/feed/',
     'https://mexiconewsdaily.com/feed/',
 ]
 
