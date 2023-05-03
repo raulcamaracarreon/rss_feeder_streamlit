@@ -41,6 +41,14 @@ max_articles = st.slider('Maximum number of articles to show', min_value=1, max_
 
 urls = url.split(",")
 
+st.markdown("""
+    <style>
+        .stText {
+            text-align: justify;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 for single_url in urls:
     if single_url:
         articles = get_feed(single_url)
@@ -59,7 +67,7 @@ for single_url in urls:
             
             # Limpiar y mostrar el resumen
             cleaned_summary = clean_html(article.summary)
-            st.write(cleaned_summary)
+            st.markdown(f'<div class="stText">{cleaned_summary}</div>', unsafe_allow_html=True)
             
             # Mostrar la fecha de publicación o actualización
             if hasattr(article, 'published'):
