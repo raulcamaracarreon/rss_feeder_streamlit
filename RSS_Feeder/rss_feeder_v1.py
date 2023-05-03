@@ -28,6 +28,10 @@ def get_image(article):
 def filter_articles(articles, keyword):
     return [article for article in articles if keyword.lower() in article.title.lower() or keyword.lower() in article.summary.lower()]
 
+def clean_html(content):
+    soup = BeautifulSoup(content, 'html.parser')
+    return soup.get_text()
+
 st.title('RSS Feed Reader')
 
 url = st.text_input('Enter the RSS feed URL (You can add more than one URL by separating them with commas)', value=",".join(default_feeds))
@@ -53,7 +57,9 @@ for single_url in urls:
             if image_url:
                 st.image(image_url)
             
-            st.write(article.summary)
+            # Limpiar y mostrar el resumen
+            cleaned_summary = clean_html(article.summary)
+            st.write(cleaned_summary)
             
             # Mostrar la fecha de publicación o actualización
             if hasattr(article, 'published'):
