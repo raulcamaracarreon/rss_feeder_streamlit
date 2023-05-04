@@ -4,11 +4,11 @@ from bs4 import BeautifulSoup
 
 # Añadir las URL de feeds por defecto
 default_feeds = [
-    'http://imparcialoaxaca.mx/feed/',
-    'https://www.elsiglodetorreon.com.mx/index.xml',
+    'https://www.sinembargo.mx/feed',
     'https://www.mural.com.mx/rss/portada.xml',
     'https://diario.mx/jrz/media/sitemaps/rss.xml',
-    'https://www.sinembargo.mx/feed',
+    'http://imparcialoaxaca.mx/feed/',
+    'https://www.elsiglodetorreon.com.mx/index.xml',
     'https://www.elnorte.com/rss/portada.xml',
     'http://expresochiapas.com/noticias/feed/',
     'https://mexiconewsdaily.com/feed/',
