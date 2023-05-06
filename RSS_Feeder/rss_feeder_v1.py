@@ -15,7 +15,7 @@ default_feeds = [
     'https://www.elnorte.com/rss/portada.xml',
     'http://expresochiapas.com/noticias/feed/',
     'https://mexiconewsdaily.com/feed/',
-    'https://jornada.com.mx/rss/edicion.xmlv=1'
+    'https://jornada.com.mx/rss/edicion.xmlv=1',
 ]
 
 def get_feed(url):
