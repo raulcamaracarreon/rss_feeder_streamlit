@@ -43,6 +43,9 @@ keyword = st.text_input('Filter by keyword (optional)')
 
 max_articles = st.slider('Maximum number of articles to show', min_value=1, max_value=200, value=100)
 
+# Agrega una casilla de verificación para controlar la visibilidad de la fecha de publicación
+show_published = st.checkbox('Mostrar fecha de publicación')
+
 urls = url.split(",")
 
 st.markdown("""
@@ -73,10 +76,9 @@ for single_url in urls:
             cleaned_summary = clean_html(article.summary)
             st.markdown(f'<div class="stText">{cleaned_summary}</div>', unsafe_allow_html=True)
             
-            # Mostrar la fecha de publicación o actualización
-            if hasattr(article, 'published'):
-                st.write('**Published:**', article.published)
-            elif hasattr(article, 'updated'):
-                st.write('**Updated:**', article.updated)
-
-
+            # Mostrar la fecha de publicación o actualización si la casilla de verificación está activada
+            if show_published:
+                if hasattr(article, 'published'):
+                    st.write('**Published:**', article.published)
+                elif hasattr(article, 'updated'):
+                    st.write('**Updated:**', article.updated)
