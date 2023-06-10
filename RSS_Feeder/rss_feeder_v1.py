@@ -38,6 +38,20 @@ def clean_html(content):
 
 st.title('RSS Feed Reader')
 
+st.markdown("""
+    <style>
+        .stTextInput>label,
+        .stSlider>label,
+        .stCheckbox .Widget>label {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .stText {
+            text-align: justify;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 url = st.text_input('Enter the RSS feed URL (You can add more than one URL by separating them with commas)', value=",".join(default_feeds))
 keyword = st.text_input('Filter by keyword (optional)')
 
@@ -47,14 +61,6 @@ max_articles = st.slider('Maximum number of articles to show', min_value=1, max_
 show_published = st.checkbox('Show publication date (Useful with text readers)')
 
 urls = url.split(",")
-
-st.markdown("""
-    <style>
-        .stText {
-            text-align: justify;
-        }
-    </style>
-""", unsafe_allow_html=True)
 
 for single_url in urls:
     if single_url:
@@ -74,8 +80,8 @@ for single_url in urls:
             
             # Limpiar y mostrar el resumen
             cleaned_summary = clean_html(article.summary)
-            st.markdown(f'<div class="stText">{cleaned_summary}</div>', unsafe_allow_html=True)
-            
+            st.markdown(f'<div class="stText">{cleaned_summary}</div>', unsafe_allow_html=True
+                        
             # Mostrar la fecha de publicación o actualización si la casilla de verificación está activada
             if show_published:
                 if hasattr(article, 'published'):
