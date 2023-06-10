@@ -14,7 +14,6 @@ default_feeds = [
     'https://www.milenio.com/rss',
     'https://www.sdpnoticias.com/arc/outboundfeeds/rss/?outputType=xml'
     'https://www.elnorte.com/rss/portada.xml',
-    'https://mexiconewsdaily.com/feed/',
     
 ]
 
