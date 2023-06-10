@@ -43,8 +43,8 @@ st.markdown("""
         .stTextInput>label,
         .stSlider>label,
         .stCheckbox .Widget>label {
-            font-size: 16px;
-            font-weight: 400;
+            font-size: 14px;
+            font-weight: 300;
         }
         .stText {
             text-align: justify;
