@@ -58,7 +58,7 @@ keyword = st.text_input('Filter by keyword (optional)')
 max_articles = st.slider('Maximum number of articles to show', min_value=1, max_value=200, value=100)
 
 # Agrega una casilla de verificación para controlar la visibilidad de la fecha de publicación
-show_published = st.checkbox('Show publication date (Useful with text readers)')
+show_published = st.checkbox('Show publication date (Hiding is useful with text readers)')
 
 urls = url.split(",")
 
