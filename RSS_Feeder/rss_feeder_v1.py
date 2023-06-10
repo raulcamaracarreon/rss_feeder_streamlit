@@ -10,12 +10,8 @@ default_feeds = [
     'https://editorial.aristeguinoticias.com/feed/',
     'https://editorial.aristeguinoticias.com/category/mundo/feed/',
     'https://editorial.aristeguinoticias.com/category/aristegui-en-vivo/enterate/feed',
-    'http://imparcialoaxaca.mx/feed/',
-    'https://www.elsiglodetorreon.com.mx/index.xml',
     'https://www.elnorte.com/rss/portada.xml',
-    'http://expresochiapas.com/noticias/feed/',
     'https://mexiconewsdaily.com/feed/',
-    'https://jornada.com.mx/rss/edicion.xmlv=1',
 ]
 
 def get_feed(url):
