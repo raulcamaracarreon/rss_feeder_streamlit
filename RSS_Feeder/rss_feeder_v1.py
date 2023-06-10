@@ -80,8 +80,8 @@ for single_url in urls:
             
             # Limpiar y mostrar el resumen
             cleaned_summary = clean_html(article.summary)
-            st.markdown(f'<div class="stText">{cleaned_summary}</div>', unsafe_allow_html=True
-                        
+            st.markdown(f'<div class="stText">{cleaned_summary}</div>', unsafe_allow_html=True)
+            
             # Mostrar la fecha de publicación o actualización si la casilla de verificación está activada
             if show_published:
                 if hasattr(article, 'published'):
