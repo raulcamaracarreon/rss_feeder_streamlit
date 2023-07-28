@@ -1,6 +1,8 @@
 import streamlit as st
 import feedparser
 from bs4 import BeautifulSoup
+import os
+os.system('pip install "click<8.0,>=7.0"')
 
 # Añadir las URL de feeds por defecto
 default_feeds = [
